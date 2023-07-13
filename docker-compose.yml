@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     ports:
-      - $BACK_PORT:8080
+      - $BACK_PORT:$BACK_PORT
     depends_on:
       - db
     environment:

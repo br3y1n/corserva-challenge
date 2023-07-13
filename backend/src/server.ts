@@ -1,9 +1,8 @@
-import db from "./shared/infrastructure/database/config/database";
-import { startRoutes } from "./shared/infrastructure/http";
+import { startDb } from "./shared/infrastructure/database/config";
+import { startRoutes } from "./shared/infrastructure/http/config";
 
 const startServer = async () => {
-  await db.authenticate();
-
+  await startDb();
   startRoutes();
 };
 
